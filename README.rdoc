@@ -2,6 +2,8 @@
 Map generated based on geolocated data of Chicago social service non-profits. 
 
 Based on Open City site template, info follows 
+ 
+
 
 = Open City site template
 
