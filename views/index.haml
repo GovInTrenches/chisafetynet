@@ -26,7 +26,7 @@
       
       var layer2 = map.layers.create({select: "geometry", from: "1g_pCtB0sShNYwp-RxcSSJEF_T5Ni7aXPEkKrXII"}); //hardship map
       var layer3 = map.layers.create({select: "geometry", from: "1yEDKyyMb8Y2HPv4gAVa77wHe370D5cwGx48y_aU"}); //cta
-      var layer4 = map.layers.create({select: "geometry", from: "1mX6chBroewdMesrXtTl_MHfya0WUZnKCOrf6Yso"}); //cta station map
+      // var layer4 = map.layers.create({select: "geometry", from: "1mX6chBroewdMesrXtTl_MHfya0WUZnKCOrf6Yso"}); //cta station map
       var layer1 = map.layers.create({select: "geometry", from: tableId}); //social services map derived from state of illinois data
       
       
@@ -35,10 +35,10 @@
       filterPanel = new OpenCity.Template.FilterPanel(tableId, filters, {
         map: map, callbackObject: "filterPanel"
       });
-      //filterPanel.present(); <- Filter panel hidden because it's not working - Google changed API
+      
     })(); 
 
-// Attempting to add Google Tacking
+// Google Tacking
 // Google Analytics ID UA-32663273-1
 :javascript
   var _gaq = _gaq || [];
@@ -55,37 +55,32 @@
 .row-fluid
   .span3
     #filters
-    %p<
+    %p
       Cash Assistance - Large Purple
-    %p<  
+    %p  
       Closed - Large Red
-    %p<
+    %p
       Family Services - Small Red
-    %p<
+    %p
       Housing - Small Yellow
-    %p<
+    %p
       Hunger - Small Green
-    %p<
+    %p
       Medical - Small Blue
-    %p<
+    %p
       Mental Health - Large Green
-    %p<
+    %p
       Multiple - Large Blue
-    %p<
+    %p
       Referral - Large Yellow
-    %p< 
+    %p 
       Substance Abuse - Large Purple
-    %p< 
+    %p 
       Youth Program - Small Purple
     %p<
     %p
       %b State Payment Data to Non-Profit Social Service Providers 
       = link_to 'here', 'https://www.google.com/fusiontables/DataSource?snapid=S51080177X6'
-    %p<
-      %b The City of Chicago's data from metrochicagodata.org was used to determine payments to social non-profits
-    %p
-      %b City Payment Data to Non-Profit Social Service Providers 
-      = link_to 'here', 'https://docs.google.com/spreadsheet/ccc?key=0Ai6V_YElwVP5dEU0VkY0NTdJT3VyR0ZqRnNHeTJsbmc'
     %p<
       %b Information on poverty, crowded housing, employment and harship provided by the City of Chicago. 
       = link_to ' here', 'https://data.cityofchicago.org/Health-Human-Services/Census-Data-Selected-socioeconomic-indicators-in-C/kn9c-c2s2'
