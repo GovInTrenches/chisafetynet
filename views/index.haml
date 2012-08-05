@@ -26,8 +26,14 @@
       
       var layer2 = map.layers.create({select: "geometry", from: "1g_pCtB0sShNYwp-RxcSSJEF_T5Ni7aXPEkKrXII"}); //hardship map
       var layer3 = map.layers.create({select: "geometry", from: "1yEDKyyMb8Y2HPv4gAVa77wHe370D5cwGx48y_aU"}); //cta
-      // var layer4 = map.layers.create({select: "geometry", from: "1mX6chBroewdMesrXtTl_MHfya0WUZnKCOrf6Yso"}); //cta station map
       var layer1 = map.layers.create({select: "geometry", from: tableId}); //social services map derived from state of illinois data
+
+      // The following layers show state payments to Chicago social service nonprofits from 2002-2011 by community area
+      // Each fusion table's data is the same, but the map styles have changed to highlight the specific year
+      // The goal is to enable the user to click through the years and see the map change as the recession goes on
+      // These layers have been commented out until solution found
+
+      // var layer4 = map.layers.create({select: "geometry", from "1BKgUNRfVSNUcMvHnari6QjxbKjJ98kV12gxttHo"}) // 2011 payment data by community area ID4666921
       
       
       map.present();
