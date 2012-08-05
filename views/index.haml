@@ -23,18 +23,27 @@
 
       map = new Fusion.Map("template_map", {center: us_centroid, zoom: 11, mapTypeControl: true});
 
-      
-      var layer2 = map.layers.create({select: "geometry", from: "1g_pCtB0sShNYwp-RxcSSJEF_T5Ni7aXPEkKrXII"}); //hardship map
-      var layer3 = map.layers.create({select: "geometry", from: "1yEDKyyMb8Y2HPv4gAVa77wHe370D5cwGx48y_aU"}); //cta
-      var layer1 = map.layers.create({select: "geometry", from: tableId}); //social services map derived from state of illinois data
-
       // The following layers show state payments to Chicago social service nonprofits from 2002-2011 by community area
       // Each fusion table's data is the same, but the map styles have changed to highlight the specific year
       // The goal is to enable the user to click through the years and see the map change as the recession goes on
       // These layers have been commented out until solution found
 
-      // var layer4 = map.layers.create({select: "geometry", from "1BKgUNRfVSNUcMvHnari6QjxbKjJ98kV12gxttHo"}) // 2011 payment data by community area ID4666921
-      
+      // var layer4 = map.layers.create({select: "geometry", from: "1BKgUNRfVSNUcMvHnari6QjxbKjJ98kV12gxttHo"}); // 2011 ID4666921
+      // var layer5 = map.layers.create({select: "geometry", from: "1_BtUopkX7S4nfDRFdqrSH3wFk2rfUvuPnSfe-2o"}); // 2010 ID4787863
+      // var layer6 = map.layers.create({select: "geometry", from: "1BjzWCADx1fvP30RXHV0o2mATr3j0QG5dVEAv-yE"}); // 2009 ID4791831
+      // var layer7 = map.layers.create({select: "geometry", from: "1w9NYr1GMvaa8-dsU5CrtostvAwscOK50Ixstcss"}); // 2008 ID4787879
+      // var layer8 = map.layers.create({select: "geometry", from: "1mNxBWwbTmxDn3vwhQ57BfZLrG4vqUP2CGygHTkY"}); // 2007 ID4791836
+      // var layer9 = map.layers.create({select: "geometry", from: "12Ps7azjYxZlggy1twE03fmn6fIPkqYIwtEvH8I4"}); // 2006 ID4790085
+      // var layer10 = map.layers.create({select: "geometry", from: "1kcTlETwfW6y6m-nxDXjK8sG_WUmUAXkmFrjXdbc"}); // 2005 ID4790661
+      // var layer11 = map.layers.create({select: "geometry", from: "1efwR7jTwv6wFkw39bYBZ7flIhSHa8h3AOrckW-4"}); // 2004 ID4790094
+      // var layer12 = map.layers.create({select: "geometry", from: "1IJAQuPSB2rBHbXemGC3RRF_OhGgPJemBRSrCMeA"}); // 2003 ID4791840
+      // var layer13 = map.layers.create({select: "geometry", from: "1VndU0a7CHh9GyhoZRoL5NPDyde499izUGY0CYfg"}); // 2002 ID4793208
+
+      // The following layers show basic information 
+
+      var layer2 = map.layers.create({select: "geometry", from: "1g_pCtB0sShNYwp-RxcSSJEF_T5Ni7aXPEkKrXII"}); // map showing poverty levels by community
+      var layer3 = map.layers.create({select: "geometry", from: "1yEDKyyMb8Y2HPv4gAVa77wHe370D5cwGx48y_aU"}); //cta lines
+      var layer1 = map.layers.create({select: "geometry", from: tableId}); //locations and payment info for nonpofits as point data      
       
       map.present();
 
