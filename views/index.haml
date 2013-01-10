@@ -17,7 +17,7 @@
       var tableId = "1wbmkAeFa-MYAwZ39FlgcesTJ8ti3e4oZfsrqesA"; // Table linking to State payment data to nonprofits
       //var tableId = "1141224"
       var filters = [
-        {"Service":  {columns: ["Type"],  type: "checkbox"}}
+        {"Type":  {columns: ["Type"],  type: "checkbox"}}
         
       ];
 
@@ -43,13 +43,15 @@
 
       var layer2 = map.layers.create({select: "geometry", from: "1g_pCtB0sShNYwp-RxcSSJEF_T5Ni7aXPEkKrXII"}); // map showing poverty levels by community
       var layer3 = map.layers.create({select: "geometry", from: "1yEDKyyMb8Y2HPv4gAVa77wHe370D5cwGx48y_aU"}); //cta lines
-      var layer1 = map.layers.create({select: "geometry", from: tableId}); //locations and payment info for nonpofits as point data      
+      var layer1 = map.layers.create({select: "geometry", from: tableId}); //locations and payment info for nonpofits, point data      
       
       map.present();
 
       filterPanel = new OpenCity.Template.FilterPanel(tableId, filters, {
         map: map, callbackObject: "filterPanel"
       });
+      //filterPanel.present(); 
+      // Filter panel doesn't work as expected - When clicked, the unclicked variables don't hide and the other layers disapper
       
     })(); 
 
